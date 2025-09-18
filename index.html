@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Egg Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Egg Timer</h1>
+    <div class="mode-toggle">
+      <label>
+        <input type="checkbox" id="darkModeToggle"> Dark Mode
+      </label>
+    </div>
+    <div class="egg-image">
+      <img id="eggImg" src="/Users/rhianna/EGG TIMER/EGGPHOTO.png!sw800" alt="Cute Egg" width="120" height="160">
+    </div>
+    <div class="timer-options">
+      <button data-time="240">Soft Boiled (4 min)</button>
+      <button data-time="360">Medium (6 min)</button>
+      <button data-time="480">Hard Boiled (8 min)</button>
+      <input type="number" id="customTime" min="1" max="999" placeholder="Custom (min)">
+      <button id="customBtn">Start Custom</button>
+    </div>
+    <div class="countdown">
+      <span id="countdownDisplay">00:00</span>
+    </div>
+    <button id="resetBtn" class="reset-btn">Reset Timer</button>
+    <div id="doneMsg" style="display:none;">Egg is ready! 🥚</div>
+
+    <!-- Nerdle Math Puzzle Game -->
+    <div class="game-container">
+      <h2>Egg Nerdle!</h2>
+      <div class="game-mode-select">
+        <label><input type="radio" name="gameMode" value="1" checked> 1 Player</label>
+        <label><input type="radio" name="gameMode" value="2"> 2 Player</label>
+        <label><input type="radio" name="gameMode" value="3"> 3 Player</label>
+      </div>
+      <div id="nerdleBoard"></div>
+      <div id="gameMsg" class="game-msg">Guess the equation! (e.g. 3+5=8)</div>
+      <button id="startGameBtn" class="reset-btn">Start Game</button>
+      <button id="resetGameBtn" class="reset-btn">Reset</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

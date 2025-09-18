@@ -1,0 +1,266 @@
+.nerdle-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+.nerdle-cell {
+  width: 32px;
+  height: 38px;
+  margin: 2px;
+  border-radius: 6px;
+  background: #f8f8f8;
+  border: 2px solid #1a5640;
+  font-size: 1.3rem;
+  color: #1a5640;
+  text-align: center;
+  line-height: 38px;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+.nerdle-cell.correct {
+  background: #1a5640;
+  color: #fff;
+}
+.nerdle-cell.present {
+  background: #ffd700;
+  color: #1a5640;
+}
+.nerdle-cell.absent {
+  background: #bdbdbd;
+  color: #fff;
+}
+.egg-flipped {
+  stroke: #e75480;
+  stroke-width: 4px;
+}
+.game-container canvas {
+  display: block;
+  margin: 0 auto 12px auto;
+  border: 2px solid #1a5640;
+}
+.egg-selected {
+  stroke: #e75480;
+  stroke-width: 4px;
+}
+.game-container canvas {
+  display: block;
+  margin: 0 auto 12px auto;
+  border: 2px solid #1a5640;
+}
+.game-mode-select {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 12px;
+}
+.game-mode-select label {
+  font-size: 1rem;
+  color: #1a5640;
+  font-weight: 500;
+  cursor: pointer;
+}
+.player-area {
+  background: #f0f8f6;
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin: 6px 0;
+  font-size: 1.1rem;
+  color: #1a5640;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(26,86,64,0.05);
+}
+body.dark .player-area {
+  background: #222;
+  color: #98ff98;
+}
+/* Game styles */
+.game-container {
+  margin-top: 32px;
+  background: #f6fff8;
+  border-radius: 16px;
+  padding: 18px 10px;
+  box-shadow: 0 2px 8px rgba(26,86,64,0.06);
+}
+.game-container h2 {
+  color: #1a5640;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+.game-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+.game-btn {
+  background: #1a5640;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.game-btn:hover {
+  background: #fff;
+  color: #1a5640;
+  border: 2px solid #1a5640;
+}
+.game-msg {
+  margin: 10px 0;
+  color: #e75480;
+  font-weight: 500;
+}
+.game-controls span {
+  font-size: 1.2rem;
+  color: #1a5640;
+  font-weight: bold;
+}
+body.dark .game-container {
+  background: #222;
+}
+body.dark .game-container h2,
+body.dark .game-controls span {
+  color: #98ff98;
+}
+body.dark .game-btn {
+  background: #98ff98;
+  color: #222;
+}
+body.dark .game-btn:hover {
+  background: #222;
+  color: #98ff98;
+  border: 2px solid #98ff98;
+}
+body.dark .game-msg {
+  color: #e75480;
+}
+body {
+  background: #f8f8f8;
+  color: #222;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(26, 86, 64, 0.08);
+  padding: 36px 28px;
+  text-align: center;
+}
+h1 {
+  margin-bottom: 18px;
+  font-size: 2.2rem;
+  color: #1a5640;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.mode-toggle {
+  text-align: right;
+  margin-bottom: 12px;
+}
+.egg-image {
+  margin: 18px 0 24px 0;
+  display: flex;
+  justify-content: center;
+}
+.timer-options {
+  margin-bottom: 24px;
+}
+.timer-options button, #customBtn {
+  margin: 4px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #1a5640;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26, 86, 64, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.timer-options button:hover, #customBtn:hover {
+  background: #fff;
+  color: #1a5640;
+  border: 2px solid #1a5640;
+}
+#customTime {
+  width: 80px;
+  padding: 8px;
+  border-radius: 12px;
+  border: 1px solid #1a5640;
+  margin-right: 8px;
+  background: #fff;
+  color: #1a5640;
+  font-size: 1rem;
+}
+.countdown {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #1a5640;
+  letter-spacing: 2px;
+}
+.reset-btn {
+  margin-top: 10px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 12px;
+  background: #1a5640;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(26, 86, 64, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+.reset-btn:hover {
+  background: #fff;
+  color: #1a5640;
+  border: 2px solid #1a5640;
+}
+#doneMsg {
+  font-size: 1.3rem;
+  color: #1a5640;
+  margin-top: 12px;
+  font-weight: 600;
+}
+/* Dark mode styles */
+body.dark {
+  background: #222;
+  color: #fff;
+}
+body.dark .container {
+  background: #333;
+  box-shadow: 0 8px 32px rgba(26, 86, 64, 0.18);
+}
+body.dark .timer-options button, body.dark #customBtn {
+  background: #1a5640;
+  color: #fff;
+}
+body.dark .timer-options button:hover, body.dark #customBtn:hover {
+  background: #333;
+  color: #1a5640;
+  border: 2px solid #1a5640;
+}
+body.dark #customTime {
+  background: #333;
+  color: #1a5640;
+  border: 1px solid #1a5640;
+}
+body.dark .reset-btn {
+  background: #1a5640;
+  color: #fff;
+}
+body.dark .reset-btn:hover {
+  background: #333;
+  color: #1a5640;
+  border: 2px solid #1a5640;
+}
